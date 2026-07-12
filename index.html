@@ -1,4 +1,686 @@
-<div class="w-full md:w-[55%] h-[50vh] md:h-[80vh] relative overflow-hidden bg-brand-beige">
-    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?..." 
-         alt="Detalle de sonrisa natural..." ...>
-</div>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Dra. Mariana Van Dyck | Diseño de Sonrisas y Estética Dental Premium</title>
+    <meta name="description" content="Descubre una experiencia odontológica de autor en Guadalajara. Diseños de sonrisa naturales que devuelven la seguridad y reflejan tu verdadera esencia.">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dra. Mariana Van Dyck | Estética Dental Premium">
+    <meta property="og:description" content="Una perspectiva humana, minimalista y ultra-profesional de la odontología estética en Guadalajara.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dra. Mariana Van Dyck | Estética Dental Premium">
+    <meta name="twitter:description" content="Redescubre la confianza de sonreír sin reservas. Atención de autor en Guadalajara.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            ivory: '#FAF8F5',
+                            beige: '#F4EFEA',
+                            sand: '#EAE3DA',
+                            charcoal: '#1C1C1A',
+                            sage: '#5F6F62',     /* Color de acción sofisticado (Verde Salvia) */
+                            terracotta: '#A96B56' /* Color de acción secundario */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #1C1C1A;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .font-editorial {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Animación Fade-in para Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Quitar barra de scroll por estética en ciertos elementos */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Dra. Mariana Van Dyck",
+      "image": "https://images.unsplash.com/photo-1594824813573-246434e33963?q=80&w=600&auto=format&fit=crop",
+      "description": "Clínica de estética dental premium y diseño de sonrisas naturales en Guadalajara.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Puerta de Hierro 5150",
+        "addressLocality": "Guadalajara",
+        "addressRegion": "Jalisco",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.7100",
+        "longitude": "-103.4111"
+      },
+      "telephone": "+523300000000",
+      "priceRange": "$$$$"
+    }
+    </script>
+</head>
+<body class="antialiased selection:bg-brand-sage selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-ivory/80 backdrop-blur-md border-b border-brand-charcoal/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+            <a href="#" class="font-editorial text-2xl tracking-widest uppercase text-brand-charcoal hover:opacity-70 transition-opacity">
+                MVD<span class="text-brand-sage">.</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 text-xs uppercase tracking-widest font-medium text-brand-charcoal/70">
+                <a href="#historia" class="hover:text-brand-charcoal transition-colors">La Doctora</a>
+                <a href="#filosofia" class="hover:text-brand-charcoal transition-colors">Enfoque</a>
+                <a href="#transformaciones" class="hover:text-brand-charcoal transition-colors">Resultados</a>
+                <a href="#experiencia" class="hover:text-brand-charcoal transition-colors">Tu Experiencia</a>
+            </nav>
+            <a href="#agenda" class="inline-block bg-brand-charcoal text-brand-ivory px-6 py-3 text-xs uppercase tracking-widest hover:bg-brand-sage transition-all duration-300 rounded-none shadow-sm">
+                Agendar Valoración
+            </a>
+        </div>
+    </header>
+
+    <section class="min-h-screen pt-24 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 md:px-12 gap-12 md:gap-8">
+        <div class="w-full md:w-[45%] flex flex-col justify-center py-8 md:py-0">
+            <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold mb-4 block">Odontología de Autor • Guadalajara</span>
+            <h1 class="font-editorial text-4xl md:text-5xl lg:text-6xl font-light text-brand-charcoal leading-tight mb-6">
+                No se trata únicamente de tener una sonrisa bonita.
+            </h1>
+            <p class="text-brand-charcoal/80 text-sm md:text-base font-light leading-relaxed mb-8 max-w-lg">
+                Se trata de volver a sonreír con la misma seguridad con la que hablas, ríes y disfrutas cada momento de tu vida. Sin reservas, sin miedos.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                <a href="#agenda" class="bg-brand-sage text-brand-ivory text-center px-8 py-4 text-xs uppercase tracking-widest font-medium hover:bg-brand-charcoal transition-all duration-300 group shadow-sm">
+                    Quiero agendar mi valoración 
+                    <span class="inline-block transform group-hover:translate-x-1 transition-transform ml-2">→</span>
+                </a>
+                <a href="https://wa.me/523300000000?text=Hola%20Dra.%20Mariana,%20me%20gustaría%20resolver%20unas%20dudas%20sobre%20mi%20valoración." target="_blank" rel="noopener" class="border border-brand-charcoal/20 text-brand-charcoal text-center px-8 py-4 text-xs uppercase tracking-widest font-medium hover:bg-brand-charcoal hover:text-brand-ivory transition-all duration-300">
+                    Resolver mis dudas por WhatsApp
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 gap-y-3 gap-x-4 pt-6 border-t border-brand-charcoal/10 text-xs tracking-wide text-brand-charcoal/70">
+                <div class="flex items-center gap-2">
+                    <span class="text-brand-sage">✓</span> Atención cien por ciento personalizada
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brand-sage">✓</span> Enfoque en odontología integral
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brand-sage">✓</span> Estética dental de alta precisión
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-brand-sage">✓</span> Atelier privado en Guadalajara
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-[55%] h-[50vh] md:h-[80vh] relative overflow-hidden bg-brand-beige">
+            <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Detalle de sonrisa natural y estética premium Dra. Mariana Van Dyck" 
+                 class="w-full h-full object-cover filter contrast-[1.02] brightness-[0.98] transition-transform duration-700 hover:scale-105"
+                 loading="eager">
+            <div class="absolute inset-0 bg-brand-charcoal/5 mix-blend-overlay"></div>
+        </div>
+    </section>
+
+    <hr class="border-brand-charcoal/5 max-w-7xl mx-auto my-24 md:my-36">
+
+    <section id="historia" class="reveal max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5 flex justify-center">
+            <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-brand-beige shadow-inner relative">
+                <img src="https://images.unsplash.com/photo-1594824813573-246434e33963?q=80&w=600&auto=format&fit=crop" 
+                     alt="Dra. Mariana Van Dyck" 
+                     class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="md:col-span-7 space-y-6">
+            <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block">Detrás de cada diseño</span>
+            <h2 class="font-editorial text-3xl md:text-4xl font-light text-brand-charcoal">Una mirada dedicada a comprender quién eres.</h2>
+            <div class="text-brand-charcoal/80 text-sm md:text-base font-light leading-relaxed space-y-4 max-w-2xl">
+                <p>
+                    Siempre creí que la odontología se había vuelto fría, sistemática y distante. Mi objetivo al fundar este espacio fue exactamente lo opuesto: crear un refugio donde la ciencia más avanzada se combine con la calidez del trato humano.
+                </p>
+                <p>
+                    No veo simplemente piezas dentales; escucho historias, entiendo inseguridades y diseño soluciones personalizadas que respeten tu fisionomía y tu personalidad única. Mi mayor recompensa es ver el momento exacto en el que te miras al espejo y sonríes sin poner la mano delante por primera vez en años.
+                </p>
+            </div>
+            <div class="pt-4">
+                <p class="font-editorial text-2xl text-brand-charcoal/90 italic">Dra. Mariana Van Dyck</p>
+                <p class="text-[10px] uppercase tracking-widest text-brand-charcoal/50 mt-1">Especialista en Estética y Salud Dental Integral</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-brand-charcoal/5 max-w-7xl mx-auto my-24 md:my-36">
+
+    <section id="filosofia" class="reveal bg-brand-beige/50 py-24 md:py-32">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block mb-3">¿Te identificas con esto?</span>
+                <h2 class="font-editorial text-3xl md:text-4xl font-light text-brand-charcoal">Las pequeñas barreras que construimos en el día a día.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brand-ivory p-8 md:p-10 border border-brand-charcoal/5 transition-all duration-300 hover:border-brand-sage/30">
+                    <span class="text-xs font-serif italic text-brand-sage block mb-4">01</span>
+                    <p class="font-editorial text-xl text-brand-charcoal mb-4">Evitas sonreír de forma espontánea en las fotografías.</p>
+                    <p class="text-xs text-brand-charcoal/60 font-light leading-relaxed">
+                        Buscas tu mejor ángulo o prefieres mantener un semblante serio porque sientes que tu sonrisa distrae de quien realmente eres.
+                    </p>
+                </div>
+                <div class="bg-brand-ivory p-8 md:p-10 border border-brand-charcoal/5 transition-all duration-300 hover:border-brand-sage/30">
+                    <span class="text-xs font-serif italic text-brand-sage block mb-4">02</span>
+                    <p class="font-editorial text-xl text-brand-charcoal mb-4">Te tapas sutilmente la boca al reír con libertad.</p>
+                    <p class="text-xs text-brand-charcoal/60 font-light leading-relaxed">
+                        Un acto tan natural y hermoso como la risa se ve interrumpido por un reflejo involuntario de ocultar tu dentadura.
+                    </p>
+                </div>
+                <div class="bg-brand-ivory p-8 md:p-10 border border-brand-charcoal/5 transition-all duration-300 hover:border-brand-sage/30">
+                    <span class="text-xs font-serif italic text-brand-sage block mb-4">03</span>
+                    <p class="font-editorial text-xl text-brand-charcoal mb-4">Has postergado esa visita clínica durante meses o años.</p>
+                    <p class="text-xs text-brand-charcoal/60 font-light leading-relaxed">
+                        El miedo al dolor, a los diagnósticos genéricos o a las malas experiencias pasadas te ha impedido dar el paso definitivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transformaciones" class="reveal max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-36">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block mb-3">La armonía de los resultados</span>
+                <h2 class="font-editorial text-3xl md:text-4xl font-light text-brand-charcoal">Resultados reales que inspiran total tranquilidad.</h2>
+            </div>
+            <p class="text-xs text-brand-charcoal/60 font-light max-w-xs md:text-right">
+                Casos reales tratados bajo un concepto de naturalidad estricta. Sin sobrecorrecciones, respetando la fisionomía del paciente.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="group cursor-pointer relative" onclick="openLightbox('https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=800&auto=format&fit=crop', 'Caso Clínico 01 - Restauración Cerámica Natural')">
+                <div class="aspect-[4/3] w-full bg-brand-beige overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?q=80&w=800&auto=format&fit=crop" 
+                         alt="Caso Clínico 1" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-xs uppercase tracking-widest text-brand-ivory bg-brand-charcoal/80 px-4 py-2">Ver Caso Completo</span>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-baseline">
+                    <h3 class="font-serif text-lg text-brand-charcoal">Restauración y Microcarillas</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/50">Caso 01</span>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer relative" onclick="openLightbox('https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop', 'Caso Clínico 02 - Alineación e Iluminación Sutil')">
+                <div class="aspect-[4/3] w-full bg-brand-beige overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop" 
+                         alt="Caso Clínico 2" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-xs uppercase tracking-widest text-brand-ivory bg-brand-charcoal/80 px-4 py-2">Ver Caso Completo</span>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-baseline">
+                    <h3 class="font-serif text-lg text-brand-charcoal">Diseño de Contorno Gingival</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/50">Caso 02</span>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer relative" onclick="openLightbox('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop', 'Caso Clínico 03 - Armonización Estética Completa')">
+                <div class="aspect-[4/3] w-full bg-brand-beige overflow-hidden relative">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop" 
+                         alt="Caso Clínico 3" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-brand-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-xs uppercase tracking-widest text-brand-ivory bg-brand-charcoal/80 px-4 py-2">Ver Caso Completo</span>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between items-baseline">
+                    <h3 class="font-serif text-lg text-brand-charcoal">Rehabilitación Mínimamente Invasiva</h3>
+                    <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/50">Caso 03</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-50 bg-brand-charcoal/95 backdrop-blur-sm hidden flex-col items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-brand-ivory text-xs uppercase tracking-widest hover:text-brand-sage transition-colors">✕ Cerrar</button>
+        <div class="max-w-4xl max-h-[80vh] overflow-hidden flex flex-col justify-center items-center">
+            <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[70vh] object-contain">
+            <p id="lightbox-caption" class="text-brand-ivory font-serif text-lg mt-4 tracking-wide text-center"></p>
+        </div>
+    </div>
+
+    <section id="experiencia" class="reveal bg-brand-sand/30 py-24 md:py-36">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block mb-3">La Ruta Hacia Tu Nueva Sonrisa</span>
+                <h2 class="font-editorial text-3xl md:text-4xl font-light text-brand-charcoal">Un proceso claro, predecible y sin sorpresas.</h2>
+            </div>
+
+            <div class="relative border-l border-brand-charcoal/10 ml-4 md:ml-32 space-y-16">
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-brand-ivory border border-brand-charcoal/20 flex items-center justify-center font-serif text-xs text-brand-sage font-bold shadow-sm">1</span>
+                    <div class="md:absolute md:-left-44 md:top-0 md:w-32 md:text-right">
+                        <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/40 block font-medium">Primer Contacto</span>
+                    </div>
+                    <h3 class="font-editorial text-xl text-brand-charcoal mb-2">Agenda Digital o Telefónica</h3>
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed max-w-xl">
+                        Seleccionas el día y horario que mejor se adapte a tu ritmo de vida. Nuestro equipo se pondrá en contacto contigo para preparar tu bienvenida de manera personalizada.
+                    </p>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-brand-ivory border border-brand-charcoal/20 flex items-center justify-center font-serif text-xs text-brand-sage font-bold shadow-sm">2</span>
+                    <div class="md:absolute md:-left-44 md:top-0 md:w-32 md:text-right">
+                        <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/40 block font-medium">Sesión Uno</span>
+                    </div>
+                    <h3 class="font-editorial text-xl text-brand-charcoal mb-2">Valoración y Escucha Activa</h3>
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed max-w-xl">
+                        En una cita sin prisas, conversamos sobre tus expectativas. Realizamos una exploración clínica minuciosa y registro fotográfico digital sin ningún tipo de incomodidad.
+                    </p>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-brand-ivory border border-brand-charcoal/20 flex items-center justify-center font-serif text-xs text-brand-sage font-bold shadow-sm">3</span>
+                    <div class="md:absolute md:-left-44 md:top-0 md:w-32 md:text-right">
+                        <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/40 block font-medium">Plan de Autor</span>
+                    </div>
+                    <h3 class="font-editorial text-xl text-brand-charcoal mb-2">Diagnóstico y Diseño Digital</h3>
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed max-w-xl">
+                        Te presentamos una proyección de cómo lucirá tu tratamiento antes de empezar. Explicamos de forma totalmente transparente cada etapa y el presupuesto detallado.
+                    </p>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-brand-ivory border border-brand-charcoal/20 flex items-center justify-center font-serif text-xs text-brand-sage font-bold shadow-sm">4</span>
+                    <div class="md:absolute md:-left-44 md:top-0 md:w-32 md:text-right">
+                        <span class="text-[10px] uppercase tracking-widest text-brand-charcoal/40 block font-medium">El Proceso</span>
+                    </div>
+                    <h3 class="font-editorial text-xl text-brand-charcoal mb-2">Tratamiento Clínico Confortable</h3>
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed max-w-xl">
+                        Ejecutamos el plan utilizando tecnología de punta y técnicas mínimamente invasivas diseñadas para mitigar cualquier molestia. Tu bienestar en el sillón es nuestra prioridad absoluta.
+                    </p>
+                </div>
+
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[17px] top-0 w-8 h-8 rounded-full bg-brand-sage text-brand-ivory flex items-center justify-center font-serif text-xs font-bold shadow-sm">5</span>
+                    <div class="md:absolute md:-left-44 md:top-0 md:w-32 md:text-right">
+                        <span class="text-[10px] uppercase tracking-widest text-brand-sage block font-semibold">El Resultado</span>
+                    </div>
+                    <h3 class="font-editorial text-xl text-brand-sage font-semibold mb-2">Tu Nueva Sonrisa Natural</h3>
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed max-w-xl">
+                        Te damos el alta con una sonrisa estructuralmente sana, estéticamente impecable y que refleja de forma genuina tu esencia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-36">
+        <div class="text-center max-w-xl mx-auto mb-20">
+            <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block mb-3">¿Por qué elegir la práctica de la Dra. Mariana?</span>
+            <h2 class="font-editorial text-3xl md:text-4xl font-light text-brand-charcoal">Los pilares de una experiencia verdaderamente premium.</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Empatía Absoluta</h3>
+                <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                    Entendemos que acudir al dentista puede generar dudas o tensión. Nos tomamos el tiempo necesario para escucharte y avanzar exclusivamente a tu propio ritmo.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Precisión Quirúrgica</h3>
+                <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                    Trabajamos bajo magnificación y con los estándares tecnológicos más rigurosos para garantizar que cada tratamiento sea duradero y biológicamente idóneo.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Cuidado del Detalle</h3>
+                <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                    Desde la iluminación tenue de la sala hasta la textura de los materiales cerámicos, controlamos minuciosamente cada variable de tu visita médica.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Naturalidad Estricta</h3>
+                <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                    Huyamos de los resultados artificiales o excesivamente blancos. Buscamos restaurar la anatomía perfecta respetando la naturalidad de tu expresión facial.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Confianza Mutua</h3>
+                <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                    Creemos firmemente en el diagnóstico ético y transparente. Solo te propondremos aquellos procedimientos que verdaderamente aporten valor a tu salud y estética.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-editorial text-2xl text-brand-charcoal mb-3">Entorno Privado</h3>
+                <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                    Disfruta de una atención sin aglomeraciones, diseñada para resguardar por completo tu privacidad y brindarte un trato de cortesía excepcional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-ivory py-24 border-t border-b border-brand-charcoal/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block text-center mb-12">La voz de quienes confiaron en nosotros</span>
+            
+            <div class="flex overflow-x-auto gap-6 pb-8 no-scrollbar snap-x snap-mandatory">
+                
+                <div class="min-w-[85%] md:min-w-[30%] bg-brand-beige/40 p-8 border border-brand-charcoal/5 snap-start">
+                    <div class="text-brand-sage text-sm mb-4">★★★★★</div>
+                    <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed mb-6 italic">
+                        "Había postergado mi tratamiento por puro miedo. La Dra. Mariana cambió por completo mi perspectiva; su paciencia y la suavidad de su trato me devolvieron la tranquilidad. Mi sonrisa quedó increíble y súper natural."
+                    </p>
+                    <p class="text-[10px] uppercase tracking-widest text-brand-charcoal font-semibold">Carlos Mendoza</p>
+                    <p class="text-[9px] text-brand-charcoal/40">Paciente de Diseño de Sonrisa</p>
+                </div>
+
+                <div class="min-w-[85%] md:min-w-[30%] bg-brand-beige/40 p-8 border border-brand-charcoal/5 snap-start">
+                    <div class="text-brand-sage text-sm mb-4">★★★★★</div>
+                    <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed mb-6 italic">
+                        "La atención al más mínimo detalle es de otro nivel. Se siente como estar en una clínica en Nueva York o Sídney, pero con una calidez humana inigualable en Guadalajara. Súper recomendada."
+                    </p>
+                    <p class="text-[10px] uppercase tracking-widest text-brand-charcoal font-semibold">Sofía Rentería</p>
+                    <p class="text-[9px] text-brand-charcoal/40">Paciente de Estética Integral</p>
+                </div>
+
+                <div class="min-w-[85%] md:min-w-[30%] bg-brand-beige/40 p-8 border border-brand-charcoal/5 snap-start">
+                    <div class="text-brand-sage text-sm mb-4">★★★★★</div>
+                    <p class="text-xs text-brand-charcoal/80 font-light leading-relaxed mb-6 italic">
+                        "Me dio un diagnóstico sumamente ético. En otros lados querían hacerme tratamientos agresivos, pero ella optó por cuidar mi estructura natural. Ese nivel de profesionalismo es invaluable."
+                    </p>
+                    <p class="text-[10px] uppercase tracking-widest text-brand-charcoal font-semibold">Dr. Alejandro Ruiz</p>
+                    <p class="text-[9px] text-brand-charcoal/40">Paciente de Rehabilitación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal max-w-3xl mx-auto px-6 py-24 md:py-36">
+        <div class="text-center mb-16">
+            <span class="text-xs uppercase tracking-widest text-brand-sage font-semibold block mb-3">Despeja tus dudas</span>
+            <h2 class="font-editorial text-3xl md:text-4xl font-light text-brand-charcoal">Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="space-y-4">
+            <div class="border-b border-brand-charcoal/10 pb-4">
+                <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center text-left py-2 focus:outline-none">
+                    <span class="font-editorial text-lg md:text-xl text-brand-charcoal">¿Qué incluye la cita de primera valoración?</span>
+                    <span id="icon-1" class="text-xs text-brand-charcoal/60 transition-transform duration-300">＋</span>
+                </button>
+                <div id="content-1" class="hidden mt-2 pr-8">
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                        Incluye una entrevista exhaustiva para conocer tu historial, toma de registros fotográficos digitales de alta definición, exploración clínica y una propuesta preliminar de diseño y tratamiento transparente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-b border-brand-charcoal/10 pb-4">
+                <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center text-left py-2 focus:outline-none">
+                    <span class="font-editorial text-lg md:text-xl text-brand-charcoal">¿Los tratamientos estéticos dañan mis dientes naturales?</span>
+                    <span id="icon-2" class="text-xs text-brand-charcoal/60 transition-transform duration-300">＋</span>
+                </button>
+                <div id="content-2" class="hidden mt-2 pr-8">
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                        No. Toda nuestra filosofía se basa en la odontología mínimamente invasiva. Preservamos la mayor cantidad de estructura dental natural posible mediante técnicas modernas de adhesión y materiales ultradelgados de alta resistencia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-b border-brand-charcoal/10 pb-4">
+                <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center text-left py-2 focus:outline-none">
+                    <span class="font-editorial text-lg md:text-xl text-brand-charcoal">¿Cuánto tiempo toma ver el resultado definitivo?</span>
+                    <span id="icon-3" class="text-xs text-brand-charcoal/60 transition-transform duration-300">＋</span>
+                </button>
+                <div id="content-3" class="hidden mt-2 pr-8">
+                    <p class="text-xs text-brand-charcoal/70 font-light leading-relaxed">
+                        Depende enteramente de la complejidad de cada caso clínico. Algunos diseños sutiles pueden completarse con éxito en tan solo dos o tres sesiones coordinadas previamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agenda" class="reveal max-w-5xl mx-auto px-6 mb-24 md:mb-36">
+        <div class="bg-brand-charcoal text-brand-ivory p-8 md:p-16 relative overflow-hidden shadow-xl">
+            <div class="grid md:grid-cols-12 gap-12 relative z-10">
+                <div class="md:col-span-6 flex flex-col justify-center">
+                    <span class="text-xs uppercase tracking-widest text-brand-sand block mb-3 font-medium">Da el primer paso hoy</span>
+                    <h2 class="font-editorial text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-6">Permítenos acompañarte en este cambio.</h2>
+                    <p class="text-xs text-brand-sand/70 font-light leading-relaxed max-w-md">
+                        Completa tus datos en menos de un minuto. Nuestro equipo se pondrá en contacto contigo de forma sumamente discreta y amable para agendar tu espacio exclusivo.
+                    </p>
+                </div>
+
+                <div class="md:col-span-6">
+                    <form id="appointmentForm" onsubmit="validateForm(event)" class="space-y-4" novalidate>
+                        <div>
+                            <label for="fullName" class="block text-[10px] uppercase tracking-widest text-brand-sand/60 mb-1">Nombre Completo *</label>
+                            <input type="text" id="fullName" class="w-full bg-brand-ivory/10 border border-brand-ivory/20 px-4 py-3 text-xs text-brand-ivory placeholder-brand-ivory/30 focus:outline-none focus:border-brand-sand" placeholder="Ej. Alejandra Silva">
+                            <p id="error-fullName" class="text-[10px] text-brand-terracotta mt-1 hidden">Por favor ingresa tu nombre.</p>
+                        </div>
+                        <div>
+                            <label for="whatsapp" class="block text-[10px] uppercase tracking-widest text-brand-sand/60 mb-1">Teléfono / WhatsApp *</label>
+                            <input type="tel" id="whatsapp" class="w-full bg-brand-ivory/10 border border-brand-ivory/20 px-4 py-3 text-xs text-brand-ivory placeholder-brand-ivory/30 focus:outline-none focus:border-brand-sand" placeholder="Ej. 33 0000 0000">
+                            <p id="error-whatsapp" class="text-[10px] text-brand-terracotta mt-1 hidden">Por favor ingresa un número de contacto válido a 10 dígitos.</p>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-[10px] uppercase tracking-widest text-brand-sand/60 mb-1">¿Hay algo en específico que te gustaría compartirnos? (Opcional)</label>
+                            <textarea id="message" rows="3" class="w-full bg-brand-ivory/10 border border-brand-ivory/20 px-4 py-3 text-xs text-brand-ivory placeholder-brand-ivory/30 focus:outline-none focus:border-brand-sand resize-none" placeholder="Cuéntanos brevemente qué te gustaría mejorar..."></placeholder></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-sage text-brand-ivory text-xs uppercase tracking-widest font-semibold py-4 hover:bg-brand-sand hover:text-brand-charcoal transition-all duration-300">
+                            Quiero agendar mi valoración
+                        </button>
+                    </form>
+                    <div id="successMessage" class="hidden bg-brand-sage/20 border border-brand-sage p-6 text-center text-xs text-brand-sand">
+                        ✓ Gracias. Tu solicitud ha sido recibida con éxito. Nos comunicaremos contigo en un lapso menor a 2 horas hábiles.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-charcoal text-brand-ivory/60 text-xs py-16 border-t border-brand-ivory/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="space-y-4">
+                <span class="font-editorial text-2xl tracking-widest uppercase text-brand-ivory block">MVD<span class="text-brand-sage">.</span></span>
+                <p class="text-[11px] font-light leading-relaxed max-w-xs">
+                    Práctica odontológica privada y exclusiva enfocada en la armonía, salud y diseño dental de autor.
+                </p>
+            </div>
+            <div class="space-y-2">
+                <span class="text-[10px] uppercase tracking-widest text-brand-ivory font-bold block mb-2">Ubicación</span>
+                <p class="font-light leading-relaxed text-[11px]">
+                    Torre Médica Premium, Piso 12<br>
+                    Av. Puerta de Hierro 5150<br>
+                    Guadalajara, Jalisco.
+                </p>
+            </div>
+            <div class="space-y-2">
+                <span class="text-[10px] uppercase tracking-widest text-brand-ivory font-bold block mb-2">Horario de Atención</span>
+                <p class="font-light leading-relaxed text-[11px]">
+                    Lunes a Viernes: 09:00h – 19:00h<br>
+                    Sábados: 09:00h – 14:00h<br>
+                    Previa cita de forma estricta.
+                </p>
+            </div>
+            <div class="space-y-2">
+                <span class="text-[10px] uppercase tracking-widest text-brand-ivory font-bold block mb-2">Contacto Directo</span>
+                <a href="https://wa.me/523300000000" target="_blank" class="block hover:text-brand-ivory transition-colors text-[11px]">WhatsApp: +52 33 0000 0000</a>
+                <a href="https://instagram.com" target="_blank" class="block hover:text-brand-ivory transition-colors text-[11px]">Instagram: @dra.marianavandyck</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-brand-ivory/5 text-center md:text-left flex flex-col md:flex-row justify-between text-[10px] text-brand-ivory/30">
+            <p>© 2026 Dra. Mariana Van Dyck. Todos los derechos reservados. Práctica Médica Autorizada.</p>
+            <p class="mt-2 md:mt-0">Diseño Editorial & Arquitectura de Conversión Premium</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/523300000000?text=Hola%20Dra.%20Mariana,%20me%20gustaría%20agendar%20una%20cita%20de%20primera%20valoración." 
+       target="_blank" 
+       rel="noopener" 
+       class="fixed bottom-6 right-6 z-40 bg-brand-sage text-brand-ivory w-12 h-12 flex items-center justify-center rounded-none shadow-lg hover:bg-brand-charcoal hover:-translate-y-1 transition-all duration-300 group"
+       title="Hablar con la doctora">
+        <svg class="w-5 h-5 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.975 14.069.951 11.53.951c-5.438 0-9.863 4.373-9.867 9.801-.001 1.73.475 3.424 1.378 4.919l-.995 3.637 3.799-.944z"/>
+        </svg>
+    </a>
+
+    <button id="btnScrollTop" 
+            onclick="scrollToTop()" 
+            class="fixed bottom-6 left-6 z-40 bg-brand-charcoal text-brand-ivory w-10 h-10 flex items-center justify-center opacity-0 transition-all duration-300 pointer-events-none hover:bg-brand-sage">
+        <span class="text-xs">↑</span>
+    </button>
+
+    <script>
+        /* --- Efecto Scroll Reveal (Animación Suave al Desplazarse) --- */
+        const reveals = document.querySelectorAll(".reveal");
+        
+        function checkReveal() {
+            const triggerBottom = window.innerHeight * 0.85;
+            reveals.forEach(reveal => {
+                const revealTop = reveal.getBoundingClientRect().top;
+                if (revealTop < triggerBottom) {
+                    reveal.classList.add("active");
+                }
+            });
+        }
+        
+        window.addEventListener("scroll", checkReveal);
+        window.addEventListener("load", checkReveal); // Activa elementos visibles inicialmente
+
+        /* --- Mostrar / Ocultar botón Volver Arriba --- */
+        const btnScrollTop = document.getElementById("btnScrollTop");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                btnScrollTop.classList.remove("opacity-0", "pointer-events-none");
+                btnScrollTop.classList.add("opacity-100");
+            } else {
+                btnScrollTop.classList.remove("opacity-100");
+                btnScrollTop.classList.add("opacity-0", "pointer-events-none");
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* --- Acordeón Dinámico Reusable --- */
+        function toggleAccordion(id) {
+            const content = document.getElementById(`content-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '－';
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '＋';
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        /* --- Lightbox de la Galería --- */
+        function openLightbox(src, caption) {
+            document.getElementById("lightbox-img").src = src;
+            document.getElementById("lightbox-caption").textContent = caption;
+            document.getElementById("lightbox").classList.remove("hidden");
+            document.getElementById("lightbox").classList.add("flex");
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").classList.add("hidden");
+            document.getElementById("lightbox").classList.remove("flex");
+        }
+
+        /* --- Validación Profesional del Formulario de Conversión --- */
+        function validateForm(event) {
+            event.preventDefault();
+            
+            const nameInput = document.getElementById("fullName");
+            const whatsappInput = document.getElementById("whatsapp");
+            
+            const errorName = document.getElementById("error-fullName");
+            const errorWhatsapp = document.getElementById("error-whatsapp");
+            
+            let isValid = true;
+
+            // Validación de Nombre
+            if (nameInput.value.trim() === "") {
+                errorName.classList.remove("hidden");
+                nameInput.classList.add("border-brand-terracotta");
+                isValid = false;
+            } else {
+                errorName.classList.add("hidden");
+                nameInput.classList.remove("border-brand-terracotta");
+            }
+
+            // Validación de WhatsApp (Mínimo 10 números lógicos)
+            const phoneRegex = /^[0-9\s-]{10,15}$/;
+            if (!phoneRegex.test(whatsappInput.value.trim())) {
+                errorWhatsapp.classList.remove("hidden");
+                whatsappInput.classList.add("border-brand-terracotta");
+                isValid = false;
+            } else {
+                errorWhatsapp.classList.add("hidden");
+                whatsappInput.classList.remove("border-brand-terracotta");
+            }
+
+            // Si es válido, ocultamos formulario y simulamos éxito premium sin backend
+            if (isValid) {
+                document.getElementById("appointmentForm").classList.add("hidden");
+                document.getElementById("successMessage").classList.remove("hidden");
+            }
+        }
+    </script>
+</body>
+</html>
